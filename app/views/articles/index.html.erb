@@ -1,6 +1,8 @@
-<ul>
+<ul class="list-unstyled d-flex flex-column align-items-center text-center">
   <% @articles.each do |article| %>
-    <div><h2><%= link_to article.title, article_path(article) %></h2></div>
-    <div><%= article.content %></div>
+  <li class="col-md-8 col-lg-6 my-3">
+    <h2><%= link_to article.title, article_path(article) %></h2>
+    <p><%= article.content %></p>
+  </li>
   <% end %>
 </ul>

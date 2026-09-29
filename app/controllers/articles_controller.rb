@@ -27,6 +27,8 @@ before_action :set_article, only: [ :show, :edit, :update, :destroy ]
   end
 
   def destroy
+    @article.destroy
+    redirect_to articles_path, status: :see_other
   end
 
   private
