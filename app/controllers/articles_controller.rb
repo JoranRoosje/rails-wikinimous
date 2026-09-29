@@ -22,6 +22,8 @@ before_action :set_article, only: [ :show, :edit, :update, :destroy ]
   end
 
   def update
+     @article.update(article_params)
+     redirect_to article_path
   end
 
   def destroy
